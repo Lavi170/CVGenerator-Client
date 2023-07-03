@@ -61,7 +61,7 @@ function CreateCv({ template }) {
 
     try {
       console.log(token.token);
-      const data = await axios.patch("https://cvgeneratorapi.onrender.com/user/addCv", {
+      const data = await axios.patch("https://cvgeneratorapinew.onrender.com/user/addCv", {
         token: token.token,
         firstName,
         lastName,

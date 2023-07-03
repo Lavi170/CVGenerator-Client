@@ -24,7 +24,7 @@ function MyProfile() {
 
   useEffect(() => {
     const realuser = axios
-      .post("https://cvgeneratorapi.onrender.com/user/getUser", {
+      .post("https://cvgeneratorapinew.onrender.com/user/getUser", {
         token: JSON.parse(localStorage.getItem("user")).token,
         
       })
@@ -36,7 +36,7 @@ function MyProfile() {
       });
 
     const ans = axios
-      .post("https://cvgeneratorapi.onrender.com/user/finalCv", {
+      .post("https://cvgeneratorapinew.onrender.com/user/finalCv", {
         token: token,
       })
       .then((data) => {
@@ -51,7 +51,7 @@ function MyProfile() {
   const deleteCv = async (idd) => {
     try {
       const deleteThis = await axios.patch(
-        "https://cvgeneratorapi.onrender.com/user/deleteCv",
+        "https://cvgeneratorapinew.onrender.com/user/deleteCv",
         {
           cvid: idd,
           token: token,

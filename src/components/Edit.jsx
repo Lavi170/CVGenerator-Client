@@ -16,7 +16,7 @@ function Edit() {
     let token = JSON.parse(localStorage.getItem("user")).token;
 
     axios
-      .post("https://cvgeneratorapi.onrender.com/user/finalCv", {
+      .post("https://cvgeneratorapinew.onrender.com/user/finalCv", {
         token: token,
       })
       .then((data) => {
@@ -73,7 +73,7 @@ function Edit() {
     const hobbies = e.target[10].value;
 
     try {
-      const data = await axios.patch("https://cvgeneratorapi.onrender.com/user/editCv", {
+      const data = await axios.patch("https://cvgeneratorapinew.onrender.com/user/editCv", {
         token: token.token,
         firstName,
         lastName,

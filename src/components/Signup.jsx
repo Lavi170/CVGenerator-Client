@@ -21,7 +21,7 @@ const SignUp = () => {
     console.log("Email:", email);
     console.log("Password:", password);
     try {
-      const newUser = await axios.post("https://cvgeneratorapi.onrender.com/user/register", {
+      const newUser = await axios.post("https://cvgeneratorapinew.onrender.com/user/register", {
         email: email,
         password: password,
       });

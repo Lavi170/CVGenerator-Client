@@ -10,7 +10,7 @@ const Result = () => {
   const templateKind = mainData.template
   useEffect(() => {
         axios
-        .post("https://cvgeneratorapi.onrender.com/user/finalCv", { token : JSON.parse(localStorage.getItem("user")).token })
+        .post("https://cvgeneratorapinew.onrender.com/user/finalCv", { token : JSON.parse(localStorage.getItem("user")).token })
         .then((data) => {
         setMainData(data.data.userInfo.cvs[data.data.userInfo.cvs.length-1])
             console.log(mainData);
