@@ -68,6 +68,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     background-color: #000000;
+    cursor: pointer;
     /* background-color: transparent; */
     box-shadow: 1px 1px 12px #000000;
   }
