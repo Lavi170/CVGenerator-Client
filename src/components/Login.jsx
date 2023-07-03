@@ -22,7 +22,7 @@ useEffect(()=>{
         try{
          
           const token = await axios.post(
-            "https://cvgeneratorapi.onrender.com/user",{email:email, password: password}
+            "https://cvgeneratorapi.onrender.com/user/",{email:email, password: password}
             )
             window.location.reload();
             console.log(token.data);
