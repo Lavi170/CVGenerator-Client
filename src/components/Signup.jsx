@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./UserPage.css";
+import "./userpage.css";
 const SignUp = () => {
   const [refresh, setRefresh] = useState(true);
 
@@ -21,7 +21,7 @@ const SignUp = () => {
     console.log("Email:", email);
     console.log("Password:", password);
     try {
-      const newUser = await axios.post("http://localhost:3006/user/register", {
+      const newUser = await axios.post("https://cvgeneratorapi.onrender.com/user/register", {
         email: email,
         password: password,
       });

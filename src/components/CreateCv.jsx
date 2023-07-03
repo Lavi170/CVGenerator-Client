@@ -32,6 +32,12 @@ function CreateCv({ template }) {
     setExperienceArr(prev => [...prev, ""]);
   }
 
+  useEffect(()=>{
+    if (template == "") {
+      navigate("/template")
+    }
+    },[])
+
   function editExperience(index, e) {
     const newArr = [...experienceArr];
     newArr[index] = e.target.value;
@@ -55,7 +61,7 @@ function CreateCv({ template }) {
 
     try {
       console.log(token.token);
-      const data = await axios.patch("http://localhost:3006/user/addCv", {
+      const data = await axios.patch("https://cvgeneratorapi.onrender.com/user/addCv", {
         token: token.token,
         firstName,
         lastName,

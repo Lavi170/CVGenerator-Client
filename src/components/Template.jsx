@@ -1,10 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Template({ setTemplate }) {
   const [token, setToken] = useState(JSON.parse(localStorage.getItem("user")));
   const navigate = useNavigate();
+
+
 
   const handleNext = async (e) => {
     e.preventDefault();

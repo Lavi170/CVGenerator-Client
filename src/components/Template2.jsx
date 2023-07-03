@@ -34,7 +34,7 @@ function Template2({mainData}) {
 
   const deleteCv = async (theId)=> {
     try{
-const deleteThis = await axios.patch("http://localhost:3006/user/deleteCv", {
+const deleteThis = await axios.patch("https://cvgeneratorapi.onrender.com/user/deleteCv", {
     cvid: theId , token: token 
     
 })

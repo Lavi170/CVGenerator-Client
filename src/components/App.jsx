@@ -24,7 +24,7 @@ function App() {
             <Route path="" element={<Login></Login>}></Route>
             <Route path="Signup" element={<Signup></Signup>}></Route>
           </Route>
-          <Route path="/homepage" element={<Homepage></Homepage>}></Route>
+          <Route exact path="/homepage" element={<Homepage></Homepage>}></Route>
           <Route
             path="template"
             element={<Template setTemplate={setTemplate}></Template>}
