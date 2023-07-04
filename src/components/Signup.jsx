@@ -9,7 +9,7 @@ const SignUp = () => {
   useEffect(() => {
     setTimeout(() => {
       setRefresh(false);
-    }, 1200);
+    }, 2000);
   }, []);
 
   const navigate = useNavigate();
@@ -21,10 +21,13 @@ const SignUp = () => {
     console.log("Email:", email);
     console.log("Password:", password);
     try {
-      const newUser = await axios.post("https://cvgeneratorapinew.onrender.com/user/register", {
-        email: email,
-        password: password,
-      });
+      const newUser = await axios.post(
+        "https://cvgeneratorapinew.onrender.com/user/register",
+        {
+          email: email,
+          password: password,
+        }
+      );
       console.log(newUser.data);
       navigate("/");
     } catch (err) {
@@ -42,14 +45,16 @@ const SignUp = () => {
     <div>
       <div className="signup-block">
         {refresh ? (
-          <div className="loader">
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
-            <div className="loader-square"></div>
+          <div className="banter-loader">
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
+            <div className="banter-loader__box"></div>
           </div>
         ) : (
           <form className="signup-form" onSubmit={handleSubmit}>
