@@ -43,7 +43,6 @@ const SignUp = () => {
 
   return (
     <div>
-      <div className="signup-block">
         {refresh ? (
           <div className="banter-loader">
             <div className="banter-loader__box"></div>
@@ -57,6 +56,8 @@ const SignUp = () => {
             <div className="banter-loader__box"></div>
           </div>
         ) : (
+          <div className="signup-block">
+
           <form className="signup-form" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email">Email:</label>
@@ -89,8 +90,8 @@ const SignUp = () => {
             </h5>
             <br />
           </form>
-        )}
       </div>
+        )}
     </div>
   );
 };
